@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/images/favorite.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricardo's Hideout</title>
+  <link id="stylesheet" rel="stylesheet" href="styles.css">
+  <style>
+  </style>
+  <script src="https://iframe.chat/scripts/main.min.js"></script>
+</head>
+<audio id="soundEffect" src="sound.wav" preload="auto"></audio>
+<body>
+  <script>
+    const userAgent = navigator.userAgent;
+    
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+    
+      window.location.href = 'sorry.html';
+    
+    }
+    </script>
+<div class="container">
+  <div style="width: 0%; height: 10%; margin: auto;">
+    <img src="images/white.png" class="white">
+    <img src="images/purple.png" class="purple">
+  </div>
+  <div class="rightside">
+    <div class="sidebox">
+      <a href="index.html" class="btn home-btn hoverbtn">Home</a>
+      <a href="gamelist.html" class="btn gif-btn hoverbtn">Gamelog</a>
+      <a href="birbs.html" class="btn hoverbtn">Birbs</a>
+      <a href="changelog.html" class="btn hoverbtn">Changelog</a>
+      <a href="codex.html" class="btn static-btn">Codex</a>
+      <a href="extras.html" class="btn hoverbtn">Extras</a>
+    </div>
+      <div class="icon-column">
+   <a href="https://open.spotify.com/user/89nzrjy2nm5re5ddts4cyj3nh?si=5153fa3b76ec4663" target="_blank"><img id="spotifyImage" src="images/spotify.png"/></a>
+  <a href="https://www.youtube.com/@cursedricardo" target="_blank"><img id="youtubeImage"src="images/youtube.png"/></a>  
+  <a href="https://discord.gg/zsFJzK6bBB" target="_blank"><img id="discordImage"src="images/discord.png"/></a>
+ <a href="https://steamcommunity.com/id/CursedRicardoV2/" target="_blank"><img id="steamImage" src="images/steam.png"/></a> 
+      </div>
+     
+    </div>
+  </div>
+  <div class="invisible-grid"></div>
+  <div class="anaborder"></div>
+  <div class="ana">
+        <img style="pointer-events: none; transform: rotateY(180deg); position: absolute; bottom: 9%; left: 3%; z-index: 1000000; width: 5%;" src="images/quote.gif">
+     <iframe class="chattable" src='https://iframe.chat/embed?chat=94402398' id='chattable' frameborder='none'></iframe>
+    <h1 style="margin: auto; margin-top: 3%;  color: #f2c666; font-size: 300%; display: block; font-size: clamp(1rem, 3vw, 3rem); "> EXTRAS </h1>
+    <div class="feedhim">    
+      <div class="feedhimtext2">FEED HIM <span style="text-shadow: 0px 3px 15px #f2c666; color: #f2c666;">NOW!!</span></div>
+      <div class="feedhimtext">GIOVANNI IS <span style="text-shadow: 0px 3px 15px #f2c666; color: #f2c666;">STARVING!</span></div>
+<a style="cursor: url(images/cursorhover.png), auto; position: absolute; top: 38%; left: 17.5%;" href="https://tamanotchi.world/25452c"><img src="https://tamanotchi.world/i2/25452" alt="It's tamaNOTchi! Click to feed!"></a>
+</div>
+    <img class="thatsme" src="images/thatsme.png">
+
+    
+     <script>
+  chattable.initialize({
+    stylesheet : "chattable.css"
+  });
+</script>
+<div class="webring">
+  <script src="https://flonkie.github.io/personaring/persona4.setup.js"></script>
+</div>
+    </div>
+  </div>
+  <div class="credits"><p></p></div>
+  <div class="background-container"></div>
+</div>
+<script src="script.js"></script>
+<script src="rain.js"></script>
+<script>
+document.getElementById("quizForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let q1 = document.querySelector('input[name="q1"]:checked');
+  let q2 = document.querySelector('input[name="q2"]:checked');
+  let q3 = document.querySelector('input[name="q3"]:checked');
+
+  if (!q1 || !q2 || !q3) {
+    alert("Lütfen tüm soruları cevaplayın.");
+    return;
+  }
+
+  let correct1 = "no";
+  let correct2 = "myb";
+  let correct3 = "trueyes";
+
+  if (q1.value === correct1 && q2.value === correct2 && q3.value === correct3) {
+    localStorage.clear();
+    alert("46");
+  } else {
+     
+  }
+});
+</script>
+
+
+</body>
+</html>

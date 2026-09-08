@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <audio id="error-sound" src="buzz.mp3" preload="auto"></audio>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animalwell.xyz</title>
+    <style>
+    body {
+       background-color: #000003;
+    }
+
+.icons {
+    position: relative;
+    left: 42%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    transition: 150ms ease-in-out;
+    animation: storeIconButtonAnim 2s linear infinite alternate;
+}
+
+    .icons:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+      
+    @keyframes glowAnim {
+    0% {
+        color: white;
+    }
+    80% {
+        color: white;
+    }
+    90% {
+        color:yellow;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.text {
+    text-align: center;
+    font-family: cool;
+    font-size: 1.5vw;
+    color: white;
+}
+
+.textbox  {
+  width: 60%;
+  margin: 0 auto; 
+  text-align: left;
+  color: white;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+ul {
+    color: white;
+    margin: auto;
+    display: block;
+}
+
+@font-face {
+    font-family: cool;
+    src: url(fonts/Coolvetica.otf);
+}
+    </style>
+</head>
+<body>
+    <img style="display: block; margin: auto;" src="images/animallogo.png">
+    <img class="icons" style="width: 55px; height: 55px;"  src="images/animalps.png"><img class="icons" style="width: 50px; height: 50px;" src="images/animalxbox.png"><img class="icons" style="width: 50px; height: 50px;"src="images/animalswitch.png"><img class="icons"  style="width: 55px; height: 55px;" src="images/animalsteam.png">
+   <div class="text"><p>AVAILABLE NOW FOR FREE ON ANIMALWELL.XYZ</p></div> 
+   <iframe style="border: 2px white solid; border-radius: 20px;    margin: 0 auto; display: block;" width="1300" height="731" src="https://www.youtube.com/embed/XqpEyFwFUyk" title="Animal Well - Release Trailer // NOW FREE ON ANIMALWELL.XYZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <div class="textbox">
+     <p>* Explore a surreal, interconnected, labyrinth, and unravel its many secrets. Collect items, solve puzzles, and try to survive what lurks in the dark. There is more than what you see.</p>
+    <p>* Discover a dense, atmospheric, puzzle box world with multiple layers of secrets</p>
+    <p>* Collect items that each have multiple uses and let you manipulate your environment in surprising and meaningful ways</p>
+    <p>* Tread carefully as you encounter creatures both beautiful and unsettling. You must assess for yourself what is safe and dangerous</p>
+    <p>* Custom engine/renderer built specifically for pixel art on modern hardware. Animal Well looks and plays like no other game</p>
+    <p>* Takes inspiration from the survival horror genre, adventure games, and Nintendo classics such as the original Zelda and Metroid</p>
+    <p><b>PLATFORMS: PS5, Xbox Series X|S Switch & Steam (PC)</b></p>
+    <p><b>RELEASE DATE: May 9th 2024</b></p>
+    <p><b>PRICE:  FREE</b></p>
+    <p id="steam-link" style="cursor: pointer; text-align: center; margin-top: 5%;">Click me to get an activation code for steam!</p></a>
+   </div>
+
+   <p id="steam-link" style="cursor: pointer; text-align: center; margin-top: 5%;">
+  Click me to get an activation code on steam!
+</p>
+<i><div id="activation-code" style="text-align:center;margin-top: -120px;color: white;font-size: 2vw;font-family: cool;"></div></i>
+
+
+
+   <img style="width: 1280px; height: 552; margin: auto; display: block;" src="images/bunnies.png">
+
+
+<script>
+let clicked = false; 
+
+function generateRandomString(length) {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+}
+
+document.getElementById("steam-link").addEventListener("click", function () {
+    if (clicked) return; 
+    clicked = true;
+
+    const code = "24" + generateRandomString(3) + generateRandomString(5) + generateRandomString(5) + generateRandomString(5); 
+    document.getElementById("activation-code").innerText = code;
+});
+</script>
+
+
+</body>
+</html>

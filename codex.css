@@ -1,0 +1,185 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #2e00ff;
+  overflow-y: auto;
+}
+
+* {
+     animation: crtFlicker 50ms infinite;
+}
+
+.crt-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #2e00ff;
+  overflow: visible; 
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: #00ff66;
+  padding: 2rem;
+  font-family: bluescreen;
+  font-size: 2rem;
+  filter:
+    contrast(1.2)
+    saturate(1.2)
+    drop-shadow(1px 0 red)
+    drop-shadow(-1px 0 blue);
+  animation: crtFlicker 50ms infinite;
+  text-align: center;
+  cursor: url(images/codexcursor.png), auto;
+}
+
+.crt-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+
+@keyframes crtFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.92; }
+}
+
+@font-face {
+  font-family: bluescreen;
+  src: url(fonts/bluescreen.ttf);
+}
+
+@font-face {
+  font-family: pixelout;
+  src: url(fonts/pixelout.ttf);
+}
+
+.password-box {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  
+}
+
+.digit {
+  width: 40px;
+  height: 50px;
+  background: black;
+  border: 2px solid #00ff66;
+  color: #00ff66;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 50px;
+  font-family: pixelout;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.key {
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  background-color: black;
+  color: #00ff66;
+  border: 2px solid #00ff66;
+  font-family: pixelout;
+  transition: transform 0.1s ease; 
+  margin-top: 10%;
+}
+
+.key:active {
+  transform: scale(0.95);
+  background-color: #00ff66;
+  color: black;
+}
+
+.door {
+  margin-right: 5.25%;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  display: none;
+  transform: scale(0.9);
+  cursor: url(images/codexcursorhover.png), auto;
+}
+
+.door.visible {
+  pointer-events: auto;
+  display: block;
+  transform: scale(1);
+}
+
+.door img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.shake {
+  animation: shakeAnim 0.1s ease-in-out;
+}
+
+@keyframes shakeAnim {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  50% { transform: translateX(8px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes crtFlicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+}
+
+.back {
+  background-color: transparent;
+  color: #00ff66;
+  width: 220px; 
+  height: 75px;
+  line-height: 60px; 
+  display: block; 
+  text-align: middle;
+  font-size: 100%;
+  text-decoration: none;
+  margin: 1px 0;
+  animation: none;
+  display: inline-block;
+  font-family: bluescreen;
+  position: absolute;
+  top: 1.75%;
+  left: 0%;
+  z-index: 999;
+}
+
+a, button{
+  cursor: url(images/codexcursor.png), auto;
+}
+
+a:hover, button:hover {
+  cursor: url(images/codexcursorhover.png), auto;
+}

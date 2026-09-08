@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-wrapper">
+  <img id="scareTrigger" src="images/kid.gif" style="cursor: pointer;  position: absolute; top: 40%; left: 50%;">
+    <video id="scareVideo" width="1920" style="display: none;" preload="auto">
+    <source src="jumpscare.mp4" type="video/mp4">
+  </video>
+    </div>
+
+        <script>
+const scareTrigger = document.getElementById("scareTrigger");
+const scareVideo = document.getElementById("scareVideo");
+
+scareTrigger.addEventListener("click", () => {
+  scareTrigger.style.display = "none";
+    setTimeout(() => {
+    window.location.href = 'index.html';
+  }, 600);
+
+  scareVideo.style.display = "block";
+  scareVideo.currentTime = 0;
+  scareVideo.play().catch(err => {
+    console.error("Video başlatılamadı:", err);
+  });
+
+  scareVideo.addEventListener("ended", () => {
+    scareVideo.style.display = "none";
+  }, { once: true });
+});
+
+
+    </script>
+</body>
+</html>

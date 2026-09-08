@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sen?</title>
+    <style>
+        body { font-family: monospace; margin: 20px; background-image: url(merab.png); color: #000; }
+        p { margin: 5px 0; font-size: 14px; color: rgb(0, 0, 0); text-align: center; font-size: xx-large; background-color: white;}
+        span { font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<p>IP: <span id="ip">-</span></p>
+<p>UA: <span id="ua">-</span></p>
+<p>LANG: <span id="lang">-</span></p>
+<p>RES: <span id="res">-</span></p>
+<p>AVAIL_RES: <span id="ares">-</span></p>
+<p>DEPTH: <span id="depth">-</span></p>
+<p>HZ: <span id="hz">-</span></p>
+<p>CORES: <span id="cores">-</span></p>
+<p>RAM: <span id="ram">-</span></p>
+<p>BATTERY: <span id="bat">-</span></p>
+<p>TOUCH: <span id="touch">-</span></p>
+<p>NET_TYPE: <span id="ntype">-</span></p>
+<p>RTT: <span id="rtt">-</span></p>
+<p>COOKIE: <span id="cookie">-</span></p>
+<p>DNT: <span id="dnt">-</span></p>
+<p>TZ: <span id="tz">-</span></p>
+<p>TIME: <span id="time">-</span></p>
+
+<script>
+    fetch('https://api.ipify.org?format=json')
+        .then(r => r.json())
+        .then(d => document.getElementById('ip').innerText = d.ip)
+        .catch(() => document.getElementById('ip').innerText = "ERR");
+
+    document.getElementById('ua').innerText = navigator.userAgent;
+    document.getElementById('lang').innerText = navigator.language;
+    document.getElementById('res').innerText = window.screen.width + "x" + window.screen.height;
+    document.getElementById('ares').innerText = window.screen.availWidth + "x" + window.screen.availHeight;
+    document.getElementById('depth').innerText = window.screen.colorDepth;
+    document.getElementById('cores').innerText = navigator.hardwareConcurrency || "-";
+    document.getElementById('ram').innerText = navigator.deviceMemory || "-";
+    document.getElementById('touch').innerText = ('ontouchstart' in window || navigator.maxTouchPoints > 0) ? "1" : "0";
+    document.getElementById('cookie').innerText = navigator.cookieEnabled ? "1" : "0";
+    document.getElementById('dnt').innerText = (navigator.doNotTrack === "1" || navigator.doNotTrack === "yes") ? "1" : "0";
+    document.getElementById('tz').innerText = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+    if (navigator.connection) {
+        document.getElementById('ntype').innerText = navigator.connection.effectiveType || "-";
+        document.getElementById('rtt').innerText = navigator.connection.rtt || "-";
+    }
+
+    if (navigator.getBattery) {
+        navigator.getBattery().then(b => {
+            document.getElementById('bat').innerText = Math.round(b.level * 100) + "% | " + (b.charging ? "1" : "0");
+        });
+    }
+
+    let c = 0, s = performance.now();
+    function fps(t) {
+        c++;
+        if (t - s >= 1000) {
+            document.getElementById('hz').innerText = Math.round((c * 1000) / (t - s));
+        } else {
+            requestAnimationFrame(fps);
+        }
+    }
+    requestAnimationFrame(fps);
+
+    setInterval(() => {
+        document.getElementById('time').innerText = new Date().toLocaleTimeString();
+    }, 1000);
+</script>
+
+</body>
+</html>

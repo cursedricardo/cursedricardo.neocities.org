@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> </title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .viewport {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1200px; /* spotlight (1024) + karakter alanı */
+      transform-origin: top center;
+      transform: scale(1.5) translateY(0%);
+      animation: scrollDown 6s cubic-bezier(0.3, 0.1, 0.3, 1) forwards;
+    }
+
+    @keyframes scrollDown {
+      to {
+        transform: scale(1.5) translateY(-500px);
+      }
+    }
+
+    
+    @keyframes jiggle {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(1px, -1px); }
+      50% { transform: translate(-1px, 1px); }
+      75% { transform: translate(1px, 1px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    * {
+        image-rendering: pixelated;
+    }
+
+    .spotlight {
+      display: block;
+      margin: 0 auto;
+      image-rendering: auto;
+    }
+
+    @keyframes fadeInChar {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .why-text {
+      position: absolute;
+      top: 28%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      animation: fadeInText 2s ease-in 7s forwards;
+      font-family: "supervcr", sans-serif;
+      color: white;
+    }
+
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+      }
+    }
+
+      @font-face {
+    font-family: "supervcr";
+    src: url("fonts/supervcr.ttf");
+  }
+
+        @font-face {
+    font-family: "pixelout";
+    src: url("fonts/pixelout.ttf");
+  }
+
+  #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      color: white;
+      font-size: 120px;
+      font-family: monospace;
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #number {
+      font-family: "pixelout", sans-serif;
+      color: blue;
+    } 
+  </style>
+</head>
+<body>
+  <div class="viewport">
+    <div class="scene">
+      <img src="images/spotlight.png" id="dust" class="spotlight" height="1024" width="288">
+    </div>
+    <h1 class="why-text">WHY?</h1>
+  </div>
+  <audio src="12am.mp3" autoplay></audio>
+    <div id="overlay" onclick="hideOverlay()">
+    <span id="number"></span>
+  </div>
+  <script>
+  const img = document.getElementById("dust");
+    const overlay = document.getElementById("overlay");
+    const numberSpan = document.getElementById("number");
+
+              setTimeout(() => {
+    window.location.href = 'index.html';
+  }, 20000);
+
+    let alreadyClicked = false;
+
+    img.addEventListener("click", () => {
+            if (alreadyClicked) return;
+      alreadyClicked = true;
+
+      numberSpan.textContent = "2 1 1 7";
+      overlay.style.display = "flex";
+
+      setTimeout(() => {
+        overlay.style.display = "none";
+        numberSpan.textContent = "";
+      }, 140);
+    });
+  </script>
+</body>
+</html>

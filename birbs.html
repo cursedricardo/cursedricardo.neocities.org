@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/x-icon" href="/images/favorite.ico">
+  <title>Ricardo's Hideout</title>
+  <link id="stylesheet" rel="stylesheet" href="styles.css">
+  <style>
+  </style>
+</head>
+<audio id="soundEffect" src="sound.wav" preload="auto"></audio>
+<body>
+  <script>
+    const userAgent = navigator.userAgent;
+    
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+    
+      window.location.href = 'sorry.html';
+    
+    }
+    </script>
+
+<div class="container">
+  <div style="width: 0%; height: 10%; margin: auto;">
+    <img src="images/white.png" class="white">
+    <img src="images/purple.png" class="purple">
+  </div>
+  <div class="rightside">
+    <div class="sidebox">
+      <a href="index.html" class="btn home-btn hoverbtn">Home</a>
+      <a href="gamelist.html" class="btn gif-btn hoverbtn">Gamelog</a>
+      <a href="birbs.html" class="btn hoverbtn">Birbs</a>
+      <a href="changelog.html" class="btn hoverbtn">Changelog</a>
+      <a href="codex.html" class="btn static-btn">Codex</a>
+      <a href="extras.html" class="btn hoverbtn">Extras</a>
+    </div>
+      <div class="icon-column">
+   <a href="https://open.spotify.com/user/89nzrjy2nm5re5ddts4cyj3nh?si=5153fa3b76ec4663" target="_blank"><img id="spotifyImage" src="images/spotify.png"/></a>
+  <a href="https://www.youtube.com/@cursedricardo" target="_blank"><img id="youtubeImage"src="images/youtube.png"/></a>  
+  <a href="https://discord.gg/zsFJzK6bBB" target="_blank"><img id="discordImage"src="images/discord.png"/></a>
+ <a href="https://steamcommunity.com/id/CursedRicardoV2/" target="_blank"><img id="steamImage" src="images/steam.png"/></a> 
+      </div>
+     
+    </div>
+    </div>
+  </div>
+  <div class="invisible-grid"></div>
+  <div class="anaborder"></div>
+  <div class="ana">
+    <img id="bocuk" class="retroboncuk" src="images/retroboncuk.gif">
+  <a href="archive.html"><img class="boncuk" src="images/boncuk.png"></a>   
+  <img id="ici" class="retroinci" src="images/retroinci.gif">
+  <a href="archive.html"> <img class="inci" src="images/inci.png"></a>
+  <h1 style="margin: auto; margin-top: 3%;  color: #f2c666; font-size: clamp(1rem, 3vw, 3rem); display: block;">BIRBS</h1>
+  <h2 style="color: #f2c666; position: fixed; left: 7%; bottom: 29%;">Boncuk   <span style="color: #d4d8aa; font-size: 0.9vw;">(bead)</span></h2>
+  <h2 style="color: #f2c666; position: fixed; right: 7%; bottom: 29%;"><span style="color: #d4d8aa; font-size: 0.9vw;">(pearl)</span> inci</h2>
+    <div class="boncuktext1">Age:6-7</div>
+    <div class="boncuktext2">Male</div>
+    <div class="boncuktext3">Obese (not really)<span style="font-size: 0.8vw; color: #a4a4a4;">[kinda]</span></div>
+    <div class="incitext1">Age:3-4</div>
+    <div class="incitext2">Female</div>
+    <div class="incitext3">Certified psycopath and muncher</div>
+    <div class="infotext4">Click on any of the birbs to view their archive</div>
+  </div>
+</div>
+<audio preload="auto" src="boncuk.ogg" id="bivbiv"></audio>
+<audio preload="auto" src="inci.mp3" id="aaa"></audio>
+<script src="script.js"></script>
+<script src="rain.js"></script>
+  <script>
+  const image = document.getElementById('bocuk');
+  const sound = document.getElementById('bivbiv');
+  const image2 = document.getElementById('ici')
+  const sound2 = document.getElementById('aaa')
+
+  image.addEventListener('click', () => {
+    sound.currentTime = 0;
+    sound.play();
+  });
+
+    image2.addEventListener('click', () => {
+    sound2.currentTime = 0;
+    sound2.play();
+  });
+</script>
+</body>
+</html>

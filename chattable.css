@@ -1,0 +1,115 @@
+@font-face {
+    font-family:  "MSGothic";
+    src: url(https://files.catbox.moe/jtvuhg.ttf);
+}
+
+@font-face {
+  font-family: "Header";
+  src: url(https://files.catbox.moe/dx05bz.ttf);
+}
+body {
+    font-family: MS Gothic, "MSGothic";
+    font-smooth: never;
+}
+#background, #settingsMenu {
+    background-size: 100px 100px;
+    background-attachment: local;
+    background-repeat: repeat;
+}
+a  {
+    color: #88F;
+}
+#top_banner {
+    font-family: Header, "MSGothic";
+    font-weight: bolder !important;
+    background: #f2c666;
+    width: calc(100% - 2px);
+    border: solid 1px #f2c666;
+    text-shadow: 1px 1px 2px #005;
+    position: relative;
+    z-index: 4;
+}
+.allMessages {
+    background-size: 100px 100px;
+    border: 1px solid #f2c666;
+    border-radius: 2px;
+    margin: 0 20px 0 20px;
+    position: relative;
+    color: #d4d8aa;
+    margin-top: 4%; 
+    font-size: 150%;
+}
+.allMessages.containsOnlyEmojis .emoji {
+    height: 50px;
+}
+.msgWrapper:has(.pm) {
+    padding-top: 26px;
+}
+.allMessages.pm {
+    border-color: #F55;
+}
+.allMessages.pm:after {
+    content: "Private Message";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F55;
+    color: #d4d8aa;
+    height: 16px;
+    padding: 5px;
+    position: absolute;
+    right: 5vw;
+    bottom: 100%;
+    z-index: 5;
+    border-radius: 5px 5px 0 0;
+}
+.msgWrapper + .msgWrapper {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+#timestamp {
+    font-size: 2.25vw;
+    margin-top: 10px !important;
+    color: #d4d8aa;
+}
+#input, #nameEntry {
+    background-color: #d4d8aa;
+    border-radius: 0;
+    border-top: 1px solid #f2c666;
+    font-family:  MS Gothic, "MSGothic";
+}
+#name {
+    background-color: #d4d8aa;
+    border-radius: 0;
+    border: solid 1px #f2c666;
+    padding: 2px;
+    font-family: "Header";
+}
+#settings:hover {
+    filter: drop-shadow(0 0 3px #d4d8aa) drop-shadow(0 0 3px #d4d8aa) drop-shadow(0 0 3px #d4d8aa);
+    transform: rotate(180deg);
+}
+#settings {
+    filter: drop-shadow(0 0 1px #d4d8aa) drop-shadow(0 0 1px #d4d8aa) drop-shadow(0 0 1px #d4d8aa);
+    transition: all 250ms linear;
+}
+#emojiTrayToggle {
+    height: 15px;
+    width: 15px;
+    padding: 6px;
+    margin-top: 3px;
+    margin-left: 3px;
+    background-image: url(/media/pixel-emoji.webp) !important;
+    opacity: 0.5;
+}
+#is_typing {
+ display: none;
+ opacity: 0;
+}
+
+#scrollToBottom {
+    text-shadow: 0 0 3px #6f9cd6;
+    margin-bottom: 10%;
+    margin-right: 65%;
+    color: #c9d4f1;
+}
