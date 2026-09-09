@@ -13,7 +13,7 @@
         
 */
 
-let backgroundMusic = new Audio('kaerublaster.mp3');
+let backgroundMusic = new Audio('https://files.catbox.moe/61umhw.mp3');
 backgroundMusic.loop = true;
 backgroundMusic.volume = 0.05;
 function musik() {

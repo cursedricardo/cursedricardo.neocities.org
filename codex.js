@@ -2,9 +2,9 @@ const password = [];
 const maxDigits = 4;
 
 const passMap = {
-  "2117": "a.html",
-  "1983": "f.html",
-  "1987": "f.html",
+  "2117": "animalwell.html",
+  "1983": "fnaf.html",
+  "1987": "fnaf.html",
   "4032": "kuz.html", 
   "6774": "tenekekid.html",
   "6767": "six.html",
@@ -20,9 +20,9 @@ const passMap = {
   "1225": "off.html",
 };
 
-const errorSound = new Audio("error.wav");
-const doorSound = new Audio("door.ogg");
-const clickSound = new Audio("sound.wav");
+const errorSound = new Audio("https://files.catbox.moe/elbwz1.wav");
+const doorSound = new Audio("https://files.catbox.moe/bz8oze.ogg");
+const clickSound = new Audio("https://files.catbox.moe/ytg2lg.wav");
 
 const door = document.getElementById("door");
 const doorImage = document.getElementById("doorImage");
