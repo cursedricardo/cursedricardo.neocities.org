@@ -30,7 +30,7 @@
     <div class="sidebox">
       <a href="index.html" class="btn home-btn hoverbtn">Home</a>
       <a href="gamelist.html" class="btn gif-btn hoverbtn">Gamelog</a>
-      <a href="birbs.html" class="btn hoverbtn">Birbs</a>
+      <a href="drawbox.html" class="btn hoverbtn">Drawbox</a>
       <a href="changelog.html" class="btn hoverbtn">Changelog</a>
       <a href="codex.html" class="btn static-btn">Codex</a>
       <a href="extras.html" class="btn hoverbtn">Extras</a>
@@ -53,9 +53,12 @@
     <div class="feedhim">    
       <div class="feedhimtext2">FEED HIM <span style="text-shadow: 0px 3px 15px #f2c666; color: #f2c666;">NOW!!</span></div>
       <div class="feedhimtext">GIOVANNI IS <span style="text-shadow: 0px 3px 15px #f2c666; color: #f2c666;">STARVING!</span></div>
-<a style="cursor: url(images/cursorhover.png), auto; position: absolute; top: 38%; left: 17.5%;" href="https://tamanotchi.world/25452c"><img src="https://tamanotchi.world/i2/25452" alt="It's tamaNOTchi! Click to feed!"></a>
+<a style="cursor: url(images/cursorhover.png), auto; position: absolute; top: 38%; left: 32.5%;" href="https://tamanotchi.world/25452c"><img src="https://tamanotchi.world/i2/25452" alt="It's tamaNOTchi! Click to feed!"></a>
 </div>
-    <img class="thatsme" src="images/thatsme.png">
+
+<div class="bird">    
+</div>
+
 
     
      <script>
@@ -73,32 +76,5 @@
 </div>
 <script src="script.js"></script>
 <script src="rain.js"></script>
-<script>
-document.getElementById("quizForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let q1 = document.querySelector('input[name="q1"]:checked');
-  let q2 = document.querySelector('input[name="q2"]:checked');
-  let q3 = document.querySelector('input[name="q3"]:checked');
-
-  if (!q1 || !q2 || !q3) {
-    alert("Lütfen tüm soruları cevaplayın.");
-    return;
-  }
-
-  let correct1 = "no";
-  let correct2 = "myb";
-  let correct3 = "trueyes";
-
-  if (q1.value === correct1 && q2.value === correct2 && q3.value === correct3) {
-    localStorage.clear();
-    alert("46");
-  } else {
-     
-  }
-});
-</script>
-
-
 </body>
 </html>

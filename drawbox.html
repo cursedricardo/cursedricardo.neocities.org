@@ -251,7 +251,6 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: transparent;
   line-height: 60px; 
   display: block; 
-  text-align: middle;
   font-size: clamp(1rem, 3vw, 3rem);
   text-decoration: none;
   margin: 1px 0;
@@ -263,6 +262,18 @@ input[type="range"]::-webkit-slider-thumb {
   left: 2%;
   z-index: 999;
    color: #f2c666;
+  font-size: 300%;
+  top: 6.25%;
+  left: 3%;
+  width: 150px;
+  height: 30px;
+  transition: transform 0.1s ease;
+}
+
+.back:hover {
+   color: #79c07f;
+   cursor: url(images/cursorhover.png), auto;
+   transform: scale(1.1);
 }
 
 @keyframes floaty-pixel {
