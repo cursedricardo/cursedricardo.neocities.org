@@ -113,13 +113,6 @@ top: 9%;
 cursor: url(images/cursor.png), auto;
 }
 
-.Cr {
-position: absolute;
-left: 0%;
-bottom: 9%;
-width: 80%;
-height: 60%;
-}
 
 .welcome-text {
   position: absolute;
@@ -1065,14 +1058,6 @@ z-index: -1;
 right: 67%;
 top: 9%;
 cursor: url(images/cursor.png), auto;
-}
-
-.Cr {
-position: absolute;
-left: 0%;
-bottom: 9%;
-width: 80%;
-height: 60%;
 }
 
 .welcome-text {
@@ -2229,9 +2214,9 @@ cursor: url(images/cursor.png), auto;
 .Cr {
 position: absolute;
 left: 0%;
-bottom: 9%;
-width: 80%;
-height: 60%;
+bottom: 20%;
+width: 40%;
+height: 50%;
 }
 
 .welcome-text {
