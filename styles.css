@@ -81,6 +81,7 @@ font-family: "bmspa", sans-serif;
   color: white;
   cursor: url(images/cursor.png), auto;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 10;
   padding: 1rem;
   box-sizing: border-box;
@@ -873,32 +874,12 @@ top: 16%;
 left: 51.5%;
 }
 
-.feedhimtext {
-position: fixed;
-width: 20.5%;
-height: 24.2%;
-overflow-y: auto;
-box-sizing: border-box; 
+.feedhim:hover {
 border: 2px solid transparent;
-top: 19%;
-left: 51.65%;
-font-family: "bmspa", sans-serif;
-font-size: clamp(17px, 1.5vw, 25px); 
-animation: crisis 0.4s steps(1, end) infinite;
-}
-
-.feedhimtext2 {
-position: fixed;
-width: 20.5%;
-height: 24.2%;
-overflow-y: auto;
-box-sizing: border-box; 
-border: 2px solid transparent;
-top: 47.5%;
-left: 51.65%;
-font-family: "bmspa", sans-serif;
-font-size: clamp(17px, 1.5vw, 25px); 
-animation: crisis 0.4s steps(1, end) infinite;
+border-image: url(images/border2.png) 33 round;
+transform: scale(1.02);
+transition: 0.1s;
+cursor: url(images/cursorhover.png), auto;
 }
 
 .bird {
@@ -916,9 +897,9 @@ right: 4.05%;
 
 .thatsme {
   position: absolute;
-  width: 13.5%;
-  top: 36%;
+  top: 27%;
   right: 25.75%;
+  width: 9%;
   animation: thatsme 2s ease-in-out infinite;
 }
 
@@ -1571,11 +1552,17 @@ cursor: url(images/cursorhover.png), auto;
 }
 
 .retroboncuk {
-width: 10.5%;
-height: 10.5%;
-position: absolute;
 transform-origin: 50% 0%;
-left: 7%;
+position: absolute;
+left: 80%;
+bottom: 76%;
+cursor: url(images/cursorhover.png), auto;
+}
+
+.retroinci {
+transform-origin: 50% 0%;
+position: absolute;
+left: 82.5%;
 bottom: 76%;
 cursor: url(images/cursorhover.png), auto;
 }
@@ -1598,17 +1585,6 @@ content: url(images/incistare.png);
 transform: scale(1.015);
 border: solid 2px white;
 border-image: url(images/border4.png) 33 round;
-cursor: url(images/cursorhover.png), auto;
-}
-
-.retroinci {
-  transform: rotateY(180deg);
-width: 10.5%;
-height: 10.5%;
-position: absolute;
-transform-origin: 50% 0%;
-left: 82.5%;
-bottom: 76%;
 cursor: url(images/cursorhover.png), auto;
 }
 
@@ -1838,34 +1814,6 @@ top: 16%;
 left: 51.5%;
 }
 
-.feedhimtext {
-position: fixed;
-width: 20.5%;
-height: 24.2%;
-overflow-y: auto;
-box-sizing: border-box; 
-border: 2px solid transparent;
-top: 19%;
-left: 51.65%;
-font-family: "bmspa", sans-serif;
-font-size: clamp(17px, 1.5vw, 25px); 
-animation: crisis 0.4s steps(1, end) infinite;
-}
-
-.feedhimtext2 {
-position: fixed;
-width: 20.5%;
-height: 24.2%;
-overflow-y: auto;
-box-sizing: border-box; 
-border: 2px solid transparent;
-top: 47.5%;
-left: 51.65%;
-font-family: "bmspa", sans-serif;
-font-size: clamp(17px, 1.5vw, 25px); 
-animation: crisis 0.4s steps(1, end) infinite;
-}
-
 .bird {
   position: fixed;
 width: 20.5%;
@@ -1877,14 +1825,6 @@ border: 2px solid transparent;
 border-image: url(images/border3.png) 33 round;
 top: 16%;
 right: 4.05%;
-}
-
-.thatsme {
-  position: absolute;
-  width: 13.5%;
-  top: 36%;
-  right: 25.75%;
-  animation: thatsme 2s ease-in-out infinite;
 }
 
 .reborn {
@@ -2707,6 +2647,42 @@ cursor: url(images/cursorhover.png), auto;
  color: #d4d8aa;
 }
 
+.retroboncukextras {
+transform: scale(2.3);
+transform-origin: 50% 0%;
+position: absolute;
+right: 59%;
+bottom: 61%;
+cursor: url(images/cursorhover.png), auto;
+}
+
+.retroinciextras {
+transform: scaleX(-1) scale(2.3);
+transform-origin: 50% 0%;
+position: absolute;
+left: 59%;
+bottom: 31%;
+cursor: url(images/cursorhover.png), auto;
+}
+
+.birbsarchive {
+    animation: floaty-pixel 0.4s steps(1, end) infinite;
+}
+
+.twigyellow {
+  transform: scale(3);
+  position: absolute;
+  top: 50%;
+  left: 11%;
+}
+
+.twigwhite {
+  transform: scale(3);
+  position: absolute;
+  top: 80%;
+  right: 12%;
+}
+
 .boncuk {
 content: url(images/boncuk.png);
 width: 30.5%;
@@ -2988,40 +2964,30 @@ position: fixed;
 width: 20.5%;
 height: 40%;
 overflow-y: auto;
+overflow-x: hidden;
 box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.6);
+background: rgba(0, 0, 0, 0.6);
 border: 2px solid transparent;
 border-image: url(images/border3.png) 33 round;
 top: 16%;
 left: 51.5%;
+cursor: url(images/cursorhover.png) auto;
 }
 
 .feedhimtext {
-position: fixed;
-width: 20.5%;
-height: 24.2%;
-overflow-y: auto;
-box-sizing: border-box; 
-border: 2px solid transparent;
-top: 19%;
-left: 51.65%;
 font-family: "bmspa", sans-serif;
 font-size: clamp(17px, 1.5vw, 25px); 
 animation: crisis 0.4s steps(1, end) infinite;
+position: absolute;
+top: 5.5%;
 }
 
 .feedhimtext2 {
-position: fixed;
-width: 20.5%;
-height: 24.2%;
-overflow-y: auto;
-box-sizing: border-box; 
-border: 2px solid transparent;
-top: 47.5%;
-left: 51.65%;
 font-family: "bmspa", sans-serif;
 font-size: clamp(17px, 1.5vw, 25px); 
 animation: crisis 0.4s steps(1, end) infinite;
+position: absolute;
+bottom:5%;
 }
 
 .bird {
@@ -3035,15 +3001,17 @@ border: 2px solid transparent;
 border-image: url(images/border3.png) 33 round;
 top: 16%;
 right: 4.05%;
+overflow-x: hidden;
 }
 
-.thatsme {
-  position: absolute;
-  width: 13.5%;
-  top: 36%;
-  right: 25.75%;
-  animation: thatsme 2s ease-in-out infinite;
+.bird:hover {
+border: 2px solid transparent;
+border-image: url(images/border2.png) 33 round;
+transform: scale(1.02);
+transition: 0.1s;
+cursor: url(images/cursorhover.png), auto;
 }
+
 
 .reborn {
 position: fixed;
@@ -3057,6 +3025,8 @@ top: 16%;
 left: 74.5%;
   background: rgba(0, 0, 0,0.6);
 }
+
+
 
 .webring {
 position: fixed;
