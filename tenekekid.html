@@ -1,13 +1,172 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <style>
+                
+        p {
+            font-family: off;
+        }
+
+        h1 {
+            font-family: offbold;
+            margin-bottom: 50px;
+        }
+
+
+        @font-face {
+font-family: "off";
+src: url("fonts/off.otf");
+
+}
+
+@font-face {
+font-family: "offbold";
+src: url("fonts/Coolvetica.otf");
+
+}
+
+        a:link {
+            color: rgb(191, 108, 255);
+        }
+
+         a:visited {
+            color: rgba(133, 0, 232);
+        }
+
+        body {
+            background-color: rgb(0, 5, 82);
+    background-attachment: fixed; 
+    background-size: cover;    
+    background-position: center;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .blog-post {
+            max-width: 600px;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            font-family: offbold;
+            font-size: 2.5em;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: offbold;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.6em;
+            color: #dfdfdf;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-family: off;
+            text-align: justify;
+        }
+
+        .sa {
+            font-size: 1em;
+            color: rgb(191, 108, 255);
+            text-align: center;
+        }
+
+         .as {
+            font-size: 1em;
+            color: rgb(151, 151, 151);
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            padding: 5px;
+        }
+
+        @keyframes white {
+0% {
+transform: translateY(0.15em);
+}
+50% {
+transform: translateY(-0.9em);
+}
+100% {
+transform: translateY(0.15em);
+}
+}
+
+.slider-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.slider { display: flex; width: 100%; }
+
+.slide { display: none; width: 100%; }
+.slide.active { display: block; }
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+}
+
+@keyframes floaty-pixel {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+}
+
+.img {
+  border: 2px solid white;
+}
+
+        </style>
+        <title>
+            rip
+        </title>
     </head>
     <body>
-        <img src="kedinumara1.jpg"></img>
-         <img src="kedinumara2.jpg"></img>
-          <img src="kedinumara3.jpg"></img>
-           <img src="kedinumara4.jpg"></img>
-            <img src="kedinumara5.jpg"></img>
+        <div class="blogpost">
+          <h1>rip</h1>
+        <br>
+         <div class="slider-container">
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <div class="slider">
+        <img src="kittens/kedinumara1.jpg" class="slide active">
+        <img src="kittens/kedinumara2.jpg" class="slide">
+        <img src="kittens/kedinumara3.jpg" class="slide" >
+        <img src="kittens/kedinumara4.jpg" class="slide">
+        <img src="kittens/kedinumara5.jpg" class="slide" >
+        </div>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>    
+        </div>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function changeSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+</script>
     </body>
 </html>
